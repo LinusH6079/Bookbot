@@ -9,7 +9,7 @@ def get_book_text():
 def get_wordcount():
     word_list = get_book_text().split()
     word_count = len(word_list)
-    num_words_string = f"{word_count} words found in the document"
+    num_words_string = f"Found {word_count} total words"
     
     return num_words_string
 
@@ -60,11 +60,13 @@ def sort_countcharfunc():
 
     unsorted_list.sort(reverse = True, key = sort_on)
     for dict in unsorted_list:
-        return dict
+            
+            if str.isalpha(dict["char"]):
+                print(f"{dict["char"]}: {dict["num"]}")
     
     #nested_dict = {}
     #Vad jag vill: nested_dict = {"char": "b" , "num": 4868}
 
-    
+    return unsorted_list
 
 

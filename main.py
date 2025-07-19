@@ -1,13 +1,28 @@
-from stats import get_book_text, get_wordcount, count_characters, sort_countcharfunc
+from stats import get_wordcount, sort_countcharfunc
 
 
 
 
 
 def main():
-    return get_book_text(), print(get_wordcount()), print(count_characters()), print(sort_countcharfunc())
+    
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(get_wordcount())
+    print("--------- Character Count -------")
+    sort_countcharfunc()
+    print("============= END ===============")
     
     
+
+
+
+
+    return
+
+
+
 
 main()
 
