@@ -1,22 +1,22 @@
 
 #Function to read "frankenstein.txt" and return it as a string.
-def get_book_text():
-    with open("books/frankenstein.txt") as f:
+def get_book_text(book):
+    with open(book) as f:
         file_contents = f.read()
     return file_contents
 
 #Function to get num of words "frankenstein.txt"
-def get_wordcount():
-    word_list = get_book_text().split()
+def get_wordcount(book):
+    word_list = get_book_text(book).split()
     word_count = len(word_list)
     num_words_string = f"Found {word_count} total words"
-    
+    print()
     return num_words_string
 
 #Function to counting every different character in "frankenstein.txt"
-def count_characters():
+def count_characters(book):
     
-    book_string = get_book_text()
+    book_string = get_book_text(book)
     
 
     #a string of the book in lowercase
@@ -42,9 +42,9 @@ def sort_on(items):
     return items["num"]
 
 
-def sort_countcharfunc():
+def sort_countcharfunc(book):
 
-    this_func_dict = count_characters()
+    this_func_dict = count_characters(book)
     
     unsorted_list = []
 
@@ -63,10 +63,5 @@ def sort_countcharfunc():
             
             if str.isalpha(dict["char"]):
                 print(f"{dict["char"]}: {dict["num"]}")
-    
-    #nested_dict = {}
-    #Vad jag vill: nested_dict = {"char": "b" , "num": 4868}
-
-    return unsorted_list
 
 
